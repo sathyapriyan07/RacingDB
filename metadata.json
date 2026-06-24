@@ -1,0 +1,6 @@
+{
+  "name": "RacingDB - Formula 1 Universe",
+  "description": "A premium cinematic Formula 1 ecosystem combining live-style race centre, championship standings, interactive comparison tools, historical archives, and custom rankings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
