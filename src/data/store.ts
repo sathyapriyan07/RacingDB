@@ -204,10 +204,11 @@ class OneGridStore {
         return;
       }
 
-      // If the table is completely empty, trigger an automated seed!
+      // If the table is completely empty, skip auto-seed from client side.
+      // The app will continue using hardcoded fallback data from f1Data.ts.
+      // Run the seed SQL manually in Supabase SQL editor, or use the Admin panel import.
       if (!articlesData || articlesData.length === 0) {
-        console.log("Supabase database tables empty. Autoseeding initial mock datasets...");
-        await this.seedSupabase();
+        console.log("Supabase tables empty. Using local fallback data. Seed via Admin panel or SQL editor.");
         this.supabaseStatus = "connected";
         this.notify();
         return;
